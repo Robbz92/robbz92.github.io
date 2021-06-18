@@ -1,30 +1,106 @@
 <!DOCTYPE html>
 <html>
-<style>
+
+<script>
+    function toggleSwedish(){
+        document.getElementById('textArea').value = 'Mina projekt är skrivna i java med fokus på Spring framework. Tanken är att framtida projekt skall visas på denna sida med bilder på resultatet men även tillvägagångssätt.';
+    }
+    function toggleEnglish(){
+        document.getElementById('textArea').value = 'My projects are written in java with a focus on Spring framework. The idea is that future projects will be shown on this page with pictures of the results but also the procedure.';
+    }
+</script>
+
+<style scoped>
+    .container{
+        background-image: url("https://miro.medium.com/max/6076/1*gycg7f5bYLuR4ut_JAEs7A.png");
+    }
+
     .sidebar {
+        font-style: italic;
         position: fixed;
         top: 0;
         left: 0;
         width: 250px;
         height: 100%;
         background-color: #FAFAFA;
-        padding: 32px 0;
-        display: flex;
-        align-items: center;
-        text-align: center;
         background-color: lightgrey;
     }
-    body{
+
+    .sidebar h1 {
+        margin-left: 10px;
+    }
+
+    .myPageInfo {
+        font-style: oblique;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-left: 30%;
+        width: 50%;
+    }
+
+    .buttons{
+       margin-left: 90%;
+       padding-top: 1%;
+    }
+
+    a:link {
+        text-decoration: none;
+        color: black;
+    }
+
+    a:hover {
+        text-shadow: 0 0 5px #ff0000;
+    }
+
+    .line {
+        width: 83.5%;
+        height: 0px;
+        border-bottom: 1px solid black;
+        margin-left: 16.5%;
+    }
+
+    .presentation {
+        font-style: oblique;
+        padding-top: 1%;
+    }
+
+    #textArea{
+        font-style: italic;
+        resize: none;
+        border: none;
+    }
+
+    body {
         margin: 0;
     }
 </style>
 
 <body>
-    <div class="sidebar">
-        <h1>Projects</h1>
-        <ul>
-            <a href="/weatherPage.html">Weather page</a>
-        </ul>    
+    <div class="container">
+        <div class="sidebar">
+            <h1>Projects</h1>
+            <ul>
+                <a href="/weatherPage.html">Weather page</a>
+            </ul>
+        </div>
+
+        <div class="buttons">
+            <button class="swedish" onclick="toggleSwedish()">Svenska</button>
+            <button class="english" onclick="toggleEnglish()">English</button>
+        </div>
+
+        <div class="myPageInfo">
+            <h1>Welcome to my page</h1>
+            <p>Robin</p>
+        </div>
+
+        <div class="line">
+            <p class="presentation"></p>
+            <textarea readonly name="tarea" id="textArea" cols="150" rows="30">
+                Mina projekt är skrivna i java med fokus på Spring framework. Tanken är att framtida projekt skall visas på denna sida med bilder på resultatet men även tillvägagångssätt
+            </textarea>
+        </div>
     </div>
 </body>
 
