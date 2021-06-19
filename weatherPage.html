@@ -9,7 +9,7 @@
         }
     </script>
 <style>
-.container{
+    .container{
         
     }
 
@@ -18,8 +18,6 @@
         position: fixed;
         top: 0;
         left: 0;
-        display: flex;
-        flex-direction: column;
         width: 250px;
         height: 100%;
         background-color: #FAFAFA;
@@ -63,6 +61,7 @@
     .presentation {
         font-style: oblique;
         padding-top: 1%;
+        margin-left: 17%;
     }
 
     #textArea{
@@ -106,11 +105,10 @@
         </div>
 
         <div class="line">
-            <p class="presentation"></p>
-            <textarea readonly name="tarea" id="textArea" cols="150" rows="30">
-                Tanken är att väder projektet ska efterlikna iden av t.ex. hur väder.se/smhi fungerar.
-                Jag använder mig av "https://openweathermap.org/" egna API för att hämta ut mätvärden.
-                Temeraturen är angiven i kelvin som blir omvandlad till celcius.
+        </div>
+
+        <div class="presentation">
+            <textarea readonly name="tarea" id="textArea" cols="150" rows="30">Tanken är att väder projektet ska efterlikna iden av t.ex. hur väder.se/smhi fungerar. Jag använder mig av "https://openweathermap.org/" egna API för att hämta ut mätvärden. Temeraturen är angiven i kelvin som blir omvandlad till celcius.
             </textarea>
         </div>
     </div>
