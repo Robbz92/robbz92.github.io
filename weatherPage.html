@@ -1,35 +1,104 @@
 <!DOCTYPE html>
 <html>
+    <script>
+        function toggleSwedish(){
+            document.getElementById('textArea').value = 'Tanken är att väder projektet ska efterlikna iden av t.ex. hur väder.se/smhi fungerar. Jag använder mig av "https://openweathermap.org/" egna API för att hämta ut mätvärden. Temeraturen är angiven i kelvin som blir omvandlad till celcius.';
+        }
+        function toggleEnglish(){
+            document.getElementById('textArea').value = 'The idea is that the weather project should mimic the idea of ​​e.g. how weather.se / smhi works. I use "https://openweathermap.org/" own API to retrieve measured values. The temperature is given in kelvin which is converted to celcius.';
+        }
+    </script>
 <style>
+.container{
+        
+    }
+
     .sidebar {
+        font-style: italic;
         position: fixed;
         top: 0;
         left: 0;
         width: 250px;
         height: 100%;
         background-color: #FAFAFA;
-        padding: 32px 0;
-        display: flex;
-        align-items: center;
-        text-align: center;
         background-color: lightgrey;
     }
 
-    .container{
+    .sidebar h1 {
+        margin-left: 10px;
+    }
+
+    .information {
+        font-style: oblique;
+        display: flex;
+        flex-direction: column;
         text-align: center;
+        margin-left: 30%;
+        width: 50%;
+    }
+
+    .buttons{
+       margin-left: 90%;
+       padding-top: 1%;
+    }
+
+    a:link {
+        text-decoration: none;
+        color: black;
+    }
+
+    a:hover {
+        text-shadow: 0 0 5px #ff0000;
+    }
+
+    .line {
+        width: 83.5%;
+        height: 0px;
+        border-bottom: 1px solid black;
+        margin-left: 16.5%;
+    }
+
+    .presentation {
+        font-style: oblique;
+        padding-top: 1%;
+    }
+
+    #textArea{
+        font-style: italic;
+        resize: none;
+        border: none;
+    }
+
+    body {
+        margin: 0;
     }
 </style>
 
 <body>
-    <div class="sidebar">
-        <h1>Projects</h1>
-        <ul>
-            <a href="/">home</a>
-        </ul>    
-    </div>
-
     <div class="container">
-        <h1>Weather Page</h1>
+        <div class="sidebar">
+            <h1>Projects</h1>
+            <ul>
+                <a href="/">home</a>
+            </ul>
+        </div>
+
+        <div class="buttons">
+            <button class="swedish" onclick="toggleSwedish()">Svenska</button>
+            <button class="english" onclick="toggleEnglish()">English</button>
+        </div>
+        <div class="information">
+            <h1>Weather Page</h1>
+        </div>
+
+        <div class="line">
+            <p class="presentation"></p>
+            <textarea readonly name="tarea" id="textArea" cols="150" rows="30">
+                Tanken är att väder projektet ska efterlikna iden av t.ex. hur väder.se/smhi fungerar.
+                Jag använder mig av "https://openweathermap.org/" egna API för att hämta ut mätvärden.
+                Temeraturen är angiven i kelvin som blir omvandlad till celcius.
+            </textarea>
+        </div>
     </div>
 </body>
 
